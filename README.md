@@ -29,3 +29,6 @@ The p5.js code communicates with the Arduino via serial communication.
 Once it receives the data, it parses the JSON and maps the sensor values to the background color and the size of the circle drawn on the screen.
 
 This is the basic idea of my final, but I keep running into problems with SERIAL, so hopefully I can learn to fix it. Since I haven't tried it successfully myself, my video is a basic version of one I've just started doing.I didn't succeed in seeing my code run like this.
+
+#UPDATE then I asked my peer today and finally it solved... it is just a easy problem
+but i did not noticed that
