@@ -1,16 +1,12 @@
-// serial variables
 let mSerial;
-
 let connectButton;
-
 let readyToReceive;
-
-// project variables
-let mElls = [];
+let cBackgroundColor;
+let circleSize = 0;  // 新增变量来存储圆圈的大小
 
 function receiveSerial() {
   let line = mSerial.readUntil("\n");
-  trim(line);
+  line = trim(line);
   if (!line) return;
 
   if (line.charAt(0) != "{") {
@@ -19,22 +15,11 @@ function receiveSerial() {
     return;
   }
 
-  // get data from Serial string
   let data = JSON.parse(line).data;
   let a0 = data.A0;
-  let d2 = data.D2;
 
-  // use data to update project variables
-  if (d2.isPressed) {
-    mElls.push({
-      x: random(width),
-      y: random(height),
-      c: map(d2.count % 20, 0, 20, 155, 255),
-      d: map(a0.value, 0, 4095, 20, 200),
-    });
-  }
-
-  // serial update
+  cBackgroundColor = map(a0.value, a0.min, a0.max, 0, 255);
+  circleSize = map(a0.value, a0.min, a0.max, 0, width); // 根据光敏电阻的值映射圆圈大小
   readyToReceive = true;
 }
 
@@ -48,10 +33,9 @@ function connectToSerial() {
 }
 
 function setup() {
-  // setup project
   createCanvas(windowWidth, windowHeight);
 
-  // setup serial
+  cBackgroundColor = 0;
   readyToReceive = false;
 
   mSerial = createSerial();
@@ -62,23 +46,19 @@ function setup() {
 }
 
 function draw() {
-  // project logic
-  background(0);
-  for (let i = 0; i < mElls.length; i++) {
-    let me = mElls[i];
-    fill(me.c, 0, 0);
-    ellipse(me.x, me.y, me.d, me.d);
-  }
+  background(cBackgroundColor);
 
-  // update serial: request new data
+  fill(255, 0, 0);  
+  noStroke();     
+  ellipse(width / 2, height / 2, circleSize, circleSize); 
+
   if (mSerial.opened() && readyToReceive) {
     readyToReceive = false;
     mSerial.clear();
     mSerial.write(0xab);
   }
 
-  // update serial: read new data
-  if (mSerial.availableBytes() > 8) {
+  if (mSerial.availableBytes() > 0) {
     receiveSerial();
   }
 }
