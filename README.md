@@ -30,7 +30,7 @@ Once it receives the data, it parses the JSON and maps the sensor values to the 
 
 This is the basic idea of my final, but I keep running into problems with SERIAL, so hopefully I can learn to fix it. Since I haven't tried it successfully myself, my video is a basic version of one I've just started doing.I didn't succeed in seeing my code run like this.
 
-Milestone #Idea
+#Milestone Idea
 I'm trying to generate a control that interacts with music and lights through sensor control, and I'm not sure if this idea is feasible. 
 
 I want to combine our previous music visualization ideas, in the p5js part of the creation of a visual image of the music, and then to present the music waveform changes, or call some other library form to combine the music visualization, and then at the same time I don't know if it can be achieved, I want to let the Arduino to control the light flashing according to the music waveform. 
@@ -109,7 +109,7 @@ Occasionally the problem I have is that the mac reminds me that my usb is not co
 Because the general direction of the last time there is no change, so my ideas are still very clear, just add some map () of the idea to draw the circle
 and then read the position according to the value of A0 to control the circle to read the degree of light through the effect I'm very satisfied，I'm wondering if there are any ideas or visual effects that needed to be improved?
 
-I am planning to add a button to switch different pictures.
+I am planning to add a button to switch different pictures./ video 
 
 ![GZHeBi.jpg](https://imgpile.com/images/GZHeBi.jpg)
 ![GZHyuu.jpg](https://imgpile.com/images/GZHyuu.jpg)
