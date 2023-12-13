@@ -101,7 +101,13 @@ Then after connectToSerial() you need to read some of the values.
 Then the circle is ready to be drawn, then if the serial port is open and ready to receive data, the command to request data is sent.
 If the serial port has data available, it receives and processes the data.
 
+Occasionally the problem I have is that the mac reminds me that my usb is not connected.. (even though it did) but every time I unplug it and then plug it back in it's fine!
 
+Because the general direction of the last time there is no change, so my ideas are still very clear, just add some map () of the idea to draw the circle
+and then read the position according to the value of A0 to control the circle to read the degree of light through the effect I'm very satisfied，I'm wondering if there are any ideas or visual effects that needed to be improved?
+
+![GZHeBi.jpg](https://imgpile.com/images/GZHeBi.jpg)
+![GZHyuu.jpg](https://imgpile.com/images/GZHyuu.jpg)
 
 
 
