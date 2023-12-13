@@ -109,6 +109,8 @@ Occasionally the problem I have is that the mac reminds me that my usb is not co
 Because the general direction of the last time there is no change, so my ideas are still very clear, just add some map () of the idea to draw the circle
 and then read the position according to the value of A0 to control the circle to read the degree of light through the effect I'm very satisfied，I'm wondering if there are any ideas or visual effects that needed to be improved?
 
+I am planning to add a button to switch different pictures.
+
 ![GZHeBi.jpg](https://imgpile.com/images/GZHeBi.jpg)
 ![GZHyuu.jpg](https://imgpile.com/images/GZHyuu.jpg)
 
