@@ -91,6 +91,9 @@ I think this kind of human-computer interaction reminds me of the data visualiza
 This week I'm going to do some further thinking based on my thoughts from last week
 I have some new ideas, first I want them to generate circles of different sizes and then photosensitive to control the brightness of the background.
 I want to be able to generate more circles if more light sources are recognized and vice versa.
+
+(I had an experimental video use the similar effect, so I want to do something to connect with this project)
+
  - First I thought I needed a [] to store the circle properties let circles = []
  After that I set the serial communication to receiveSerial().
 
