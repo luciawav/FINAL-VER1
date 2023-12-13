@@ -91,8 +91,12 @@ I think this kind of human-computer interaction reminds me of the data visualiza
 This week I'm going to do some further thinking based on my thoughts from last week
 I have some new ideas, first I want them to generate circles of different sizes and then photosensitive to control the brightness of the background.
 I want to be able to generate more circles if more light sources are recognized and vice versa.
-
-(I had an experimental video use the similar effect, so I want to do something to connect with this project)
+(I have series of experimental videos use the similar effect in premiere, so I want to do something to connect with this project,if I could enlarge this project, it will be so cool if I could have a showroom with all of these and let audience to interact, so I planning to connect this with my project.
+My project is an experiment on dreaming, where the circles represent the different faults that occur in the dream, and the realistic scenarios and error faults appear to prove the dividing line between dream and reality
+)
+![GZZye8.png](https://imgpile.com/images/GZZye8.png)
+![GZZj2S.png](https://imgpile.com/images/GZZj2S.png)
+![GZZeMC.png](https://imgpile.com/images/GZZeMC.png)
 
  - First I thought I needed a [] to store the circle properties let circles = []
  After that I set the serial communication to receiveSerial().
