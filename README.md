@@ -1,7 +1,7 @@
 #1
 It's been a very complicated week and I've been through a lot, first I realized that my board has been not connected with a NOT CONNECTED problem!
 I didn't know what was going on, for one thing I kept checking it over and over again, and eventually realized that it was my port connection that had been switched to something else for some reason!
-(https://imgpile.com/images/GSOKNw.png)
+![GSOKNw.png](https://imgpile.com/images/GSOKNw.png)
 
 Then I experienced problems with the serial library not being recognized and connected, I currently don't even know why I connected to this library as tutirial
 It says it doesn't exist!
