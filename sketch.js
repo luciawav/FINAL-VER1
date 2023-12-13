@@ -2,7 +2,7 @@ let mSerial;
 let connectButton;
 let readyToReceive;
 let cBackgroundColor;
-let circleSize = 0;  // 存储圆圈的大小
+let circleSize = 0;  // 新增变量来存储圆圈的大小
 
 function receiveSerial() {
   let line = mSerial.readUntil("\n");
@@ -50,7 +50,7 @@ function draw() {
 
   fill(255, 0, 0);  
   noStroke();     
-  ellipse(width / 2, height / 2, Number(circleSize), Number(circleSize)); // 转换 circleSize 为 Number 类型
+  ellipse(width / 2, height / 2, circleSize, circleSize); 
 
   if (mSerial.opened() && readyToReceive) {
     readyToReceive = false;
