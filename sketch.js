@@ -2,7 +2,7 @@ let mSerial;
 let connectButton;
 let readyToReceive;
 let cBackgroundColor;
-let circleSize = 0;  // 新增变量来存储圆圈的大小
+let circles = []; 
 
 function receiveSerial() {
   let line = mSerial.readUntil("\n");
@@ -19,7 +19,17 @@ function receiveSerial() {
   let a0 = data.A0;
 
   cBackgroundColor = map(a0.value, a0.min, a0.max, 0, 255);
-  circleSize = map(a0.value, a0.min, a0.max, 0, width); // 根据光敏电阻的值映射圆圈大小
+  let circleCount = map(a0.value, a0.min, a0.max, 1, 30); 
+  circles = [];
+
+  for (let i = 0; i < circleCount; i++) {
+    let circleSize = random(10, 100); 
+    let x = random(width); 
+    let y = random(height);
+    let circleColor = color(255, 0, 0); 
+    circles.push({ x, y, size: circleSize, color: circleColor });
+  }
+
   readyToReceive = true;
 }
 
@@ -48,9 +58,12 @@ function setup() {
 function draw() {
   background(cBackgroundColor);
 
-  fill(255, 0, 0);  
-  noStroke();     
-  ellipse(width / 2, height / 2, circleSize, circleSize); 
+  for (let i = 0; i < circles.length; i++) {
+    let circle = circles[i];
+    fill(circle.color);
+    noStroke();
+    ellipse(circle.x, circle.y, circle.size, circle.size);
+  }
 
   if (mSerial.opened() && readyToReceive) {
     readyToReceive = false;

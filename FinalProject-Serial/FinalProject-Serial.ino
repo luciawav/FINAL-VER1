@@ -1,7 +1,7 @@
 #include <ArduinoJson.h>
 
 int a0Val = 0;
-int a0Min = 1023;
+int a0Min = 4095;
 int a0Max = 0;
 
 void sendData() {

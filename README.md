@@ -88,11 +88,21 @@ I think this kind of human-computer interaction reminds me of the data visualiza
 
 
 #3
-这周我将进行一些进一步的思考给予我上周的思路，上周我遇到的问题本来想去office hour呢但是在去之前我的朋友帮我解决了
-于是我就没去（我们遇到了一模一样的问题）
-正如我所在1思考的一样，我现在想添加一些音乐跟我的互动一起，并且我想做一些进化的地方
-于是我在想如果用光照模拟音量控制器会怎么样
-我在思考可以做出一个有意思的根据光照强度来模拟音乐播放声量的东西
+This week I'm going to do some further thinking based on my thoughts from last week
+I have some new ideas, first I want them to generate circles of different sizes and then photosensitive to control the brightness of the background.
+I want to be able to generate more circles if more light sources are recognized and vice versa.
+ - First I thought I needed a [] to store the circle properties let circles = []
+ After that I set the serial communication to receiveSerial().
+
+My board is still reading the A0 value, so the background color I read over here changes to a range array of cBackgroundColor = map(a0.value, a0.min, a0.max, 0, 255)
+Worried about the screen being too full I changed the number of circles to a maximum of 30
+Randomly generate for (let i = 0; i < circleCount; i++) the range of circles
+Then after connectToSerial() you need to read some of the values.
+Then the circle is ready to be drawn, then if the serial port is open and ready to receive data, the command to request data is sent.
+If the serial port has data available, it receives and processes the data.
+
+
+
 
 
 
