@@ -5,21 +5,22 @@ I didn't know what was going on, for one thing I kept checking it over and over 
 
 Then I experienced problems with the serial library not being recognized and connected, I currently don't even know why I connected to this library as tutirial
 It says it doesn't exist!
-[Ggqi2w.png](https://imgpile.com/images/Ggqi2w.png)
+![GSkKzN.png](https://imgpile.com/images/GSkKzN.png)
 The wifi shows a different problem with the front end code so I've really been looking into what went wrong and
 I did a lot of corrections and attempts and even searched for how to fix it, even used terminal and couldn't fix it!
 
 Then I made some changes according to the tutorial.
 But there is a problem that the port is not recognized.
 I've been looking at my code over and over again and I don't know what's wrong with it!
-[GgAw4P.png](https://imgpile.com/images/GgAw4P.png)
+![GSkMvW.png](https://imgpile.com/images/GSkMvW.png)
 
 The way I think about it is
 circleSize = map(a0.value, a0.min, a0.max, 0, width); // map the circle size based on the value of the photoresistor
 hoping that I would change the size of the circle by the amount of light coming in through the photoresist.
 So my earliest thought was
-[! [GgATSx.md.jpg](https://imgpile.com/images/GgATSx.md.jpg)](https://imgpile.com/i/GgATSx)
-[! [GgAdbj.md.jpg](https://imgpile.com/images/GgAdbj.md.jpg)](https://imgpile.com/i/GgAdbj)
+![GSki0L.png](https://imgpile.com/images/GSki0L.png)
+![GSkc1x.png](https://imgpile.com/images/GSkc1x.png)
+
 The logic I am thinking about is：
 
 The Arduino code initializes the serial communication and then enters a loop.
