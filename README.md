@@ -138,12 +138,12 @@ The concept I had in mind was some geometric, code-controlled design of a malfun
 In the third part I added the element of the circle to simulate the style of the video glitch, so it occurred to me that if I receive the signal from the circle through the arduino signal transmitter
 In my circle video was drawing different circles
 
-Screenshot from the original video of the third production
-![t4dCMj.png](https://imgpile.com/images/t4dCMj.png)
-![t4dbf1.png](https://imgpile.com/images/t4dbf1.png)
-![t4dTRP.png](https://imgpile.com/images/t4dTRP.png)
-![t4ddBL.png](https://imgpile.com/images/t4ddBL.png)
-![t4d9ux.png](https://imgpile.com/images/t4d9ux.png)
+Screenshot from the original video 
+![](https://imgpile.com/images/t4dCMj.png)
+![](https://imgpile.com/images/t4dbf1.png)
+![](https://imgpile.com/images/t4dTRP.png)
+![](https://imgpile.com/images/t4ddBL.png)
+![](https://imgpile.com/images/t4d9ux.png)
 
 System diagram ，FSM diagram and Circuit diagram
 ![t4JIgC.jpg](https://imgpile.com/images/t4JIgC.jpg)
