@@ -2,8 +2,47 @@ let mSerial;
 let connectButton;
 let readyToReceive;
 let circles = []; 
-let bgImage;
 let bgVideo; 
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+
+  bgVideo = createVideo("video.mp4"); 
+  bgVideo.hide(); 
+
+  readyToReceive = false;
+  mSerial = createSerial();
+
+
+  connectButton = createButton("CONNECT");
+  connectButton.position(width / 2, height / 2);
+  connectButton.mousePressed(connectToSerial);
+
+
+  bgVideo.loop();
+}
+
+function draw() {
+  image(bgVideo, 0, 0, width, height); 
+
+
+  for (let circle of circles) {
+    fill(circle.color);
+    noStroke();
+    ellipse(circle.x, circle.y, circle.size, circle.size);
+  }
+
+
+  if (mSerial.opened() && readyToReceive) {
+    readyToReceive = false;
+    mSerial.clear();
+    mSerial.write(0xab);
+  }
+
+  if (mSerial.availableBytes() > 0) {
+    receiveSerial();
+  }
+}
 
 function receiveSerial() {
   let line = mSerial.readUntil("\n");
@@ -42,38 +81,5 @@ function connectToSerial() {
   }
 }
 
-function setup() {
-  createCanvas(windowWidth, windowHeight);
-
-  bgVideo = createVideo("video.mp4"); 
-  bgVideo.loop(); // 循环播放视频
-  bgVideo.hide(); 
-
-  readyToReceive = false;
-  mSerial = createSerial();
-
-  connectButton = createButton("CONNECT");
-  connectButton.position(width / 2, height / 2);
-  connectButton.mousePressed(connectToSerial);
-}
-
-function draw() {
-
-  image(bgVideo, 0, 0, width, height);
-
-  for (let circle of circles) {
-    fill(circle.color);
-    noStroke();
-    ellipse(circle.x, circle.y, circle.size, circle.size);
-  }
-
-  if (mSerial.opened() && readyToReceive) {
-    readyToReceive = false;
-    mSerial.clear();
-    mSerial.write(0xab);
-  }
-
-  if (mSerial.availableBytes() > 0) {
-    receiveSerial();
-  }
-}
+// 在页面加载后调用 setup 函数
+window.onload = setup;

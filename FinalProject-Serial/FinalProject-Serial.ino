@@ -22,6 +22,10 @@ void sendData() {
 void setup() {
   Serial.begin(9600);
   while (!Serial) {}
+
+  // 初始化A0的最小和最大值
+  a0Min = 4095;
+  a0Max = 0;
 }
 
 void loop() {
