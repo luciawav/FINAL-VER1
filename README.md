@@ -1,4 +1,4 @@
-#1
+## 1
 It's been a very complicated week and I've been through a lot, first I realized that my board has been not connected with a NOT CONNECTED problem!
 I didn't know what was going on, for one thing I kept checking it over and over again, and eventually realized that it was my port connection that had been switched to something else for some reason!
 ![GSOKNw.png](https://imgpile.com/images/GSOKNw.png)
@@ -54,7 +54,7 @@ Based on what I've seen in class, I'm still thinking about what would happen if 
 
 
 
-#More
+## More
 This code is my very first experience and I've encountered very many difficulties and problems
 The code of my basic framework is this assignment submission, but relatively I want to change it to interact through the effect of lights.
 I would like to have a photoresistor to control four led's, first I should need the p5.sound library to analyze the file waveforms
@@ -87,7 +87,7 @@ I think this kind of human-computer interaction reminds me of the data visualiza
 ![5.png](https://imgpile.com/images/GSPW2r.png)
 
 
-#3
+## 3
 This week I'm going to do some further thinking based on my thoughts from last week
 I have some new ideas, first I want them to generate circles of different sizes and then photosensitive to control the brightness of the background.
 I want to be able to generate more circles if more light sources are recognized and vice versa.
@@ -119,7 +119,7 @@ I am planning to add a button to switch different pictures./ video
 ![GZHyuu.jpg](https://imgpile.com/images/GZHyuu.jpg)
 
 
-#last upadate 4
+## last upadate 4
 Since I already had a basic completed frame last week, and since I was given the suggestion in class to switch my background into video, my main improvement this week was to switch to the video section
 
 So I thought to add bgVideo = createVideo("video.mp4") to the background settings
