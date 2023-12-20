@@ -2,7 +2,8 @@ let mSerial;
 let connectButton;
 let readyToReceive;
 let circles = []; 
-let bgImage; 
+let bgImage;
+let bgVideo; 
 
 function receiveSerial() {
   let line = mSerial.readUntil("\n");
@@ -44,8 +45,9 @@ function connectToSerial() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
-
-  bgImage = loadImage("pic.png"); 
+  bgVideo = createVideo("video.mp4"); 
+  bgVideo.loop(); // 循环播放视频
+  bgVideo.hide(); 
 
   readyToReceive = false;
   mSerial = createSerial();
@@ -56,8 +58,8 @@ function setup() {
 }
 
 function draw() {
- 
-  image(bgImage, 0, 0, width, height);
+
+  image(bgVideo, 0, 0, width, height);
 
   for (let circle of circles) {
     fill(circle.color);

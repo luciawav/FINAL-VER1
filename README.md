@@ -119,10 +119,38 @@ I am planning to add a button to switch different pictures./ video
 ![GZHyuu.jpg](https://imgpile.com/images/GZHyuu.jpg)
 
 
+#last upadate 4
+Since I already had a basic completed frame last week, and since I was given the suggestion in class to switch my background into video, my main improvement this week was to switch to the video section
 
+So I thought to add bgVideo = createVideo("video.mp4") to the background settings
+But I wanted to have a playback effect, so I came up with the idea of loop
 
+I took the middle section of my video and added an interactive element. I've participated in some graduation showrooms for visual communication majors in China before.
+As a person whose graduation work was not shown, I was jealous, so when I was doing my final assignment for this year's motion.
+I wondered if I could design an installation or a piece of artwork that my audience could interact with when they saw my graduation video.
 
+The main theme of my video is "Can you tell the difference between the real and virtual worlds", which is one of my favorite works and one of the most meaningful to me. It is one of my favorite works and one of the most meaningful to me. Here I am thinking that if I give it to my audience to understand and interact with it, it may deepen their understanding of my video work and the corresponding fun.
 
+When there are more light sources and more circles, I think it can be interpreted that when there is too much (more) human involvement, then the world is questioned more about rationality
+or existence. The circles represent the bugs we encounter in the world, and the user can clearly see the difference in the picture, and can participate in my work by
+together to complete the different images. I'm thinking of digital cities, our cities are digitally controlled and we are getting more and more computerized
+The concept I had in mind was some geometric, code-controlled design of a malfunctioning city.
+In the third part I added the element of the circle to simulate the style of the video glitch, so it occurred to me that if I receive the signal from the circle through the arduino signal transmitter
+In my circle video was drawing different circles
+
+Screenshot from the original video of the third production
+![t4dCMj.png](https://imgpile.com/images/t4dCMj.png)
+![t4dbf1.png](https://imgpile.com/images/t4dbf1.png)
+![t4dTRP.png](https://imgpile.com/images/t4dTRP.png)
+![t4ddBL.png](https://imgpile.com/images/t4ddBL.png)
+![t4d9ux.png](https://imgpile.com/images/t4d9ux.png)
+
+System diagram ，FSM diagram and Circuit diagram
+![t4JIgC.jpg](https://imgpile.com/images/t4JIgC.jpg)
+![t4J1mo.jpg](https://imgpile.com/images/t4J1mo.jpg)
+![t4Jnbj.jpg](https://imgpile.com/images/t4Jnbj.jpg)
+
+I used p5.js and p5.webserial for communication and I used a phototransistor connected to the A0 pin of the Arduino to generate an analog signal and the Arduino reads the analog value from the sensor and sends it to the front-end, and my java page dynamically generates and displays circles on the canvas based on the data received from the Arduino.
 
 
 
