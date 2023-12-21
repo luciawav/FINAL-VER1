@@ -152,7 +152,8 @@ System diagram ，FSM diagram and Circuit diagram
 
 I used p5.js and p5.webserial for communication and I used a phototransistor connected to the A0 pin of the Arduino to generate an analog signal and the Arduino reads the analog value from the sensor and sends it to the front-end, and my java page dynamically generates and displays circles on the canvas based on the data received from the Arduino.
 
-
+user test:
+Since my project is a visual experience, the operability is still not very difficult. Everyone basically understands the operationalization of my project.
 
 
 
